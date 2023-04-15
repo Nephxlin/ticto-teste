@@ -1,0 +1,22 @@
+@import "../../../styles/variables.scss";
+
+.headerBackground {
+  display: flex;
+  background-color: $--color-purple-800;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 36px 20px 0px 20px;
+  height: 177px;
+}
+
+.headerNavigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  @media (max-width: 850px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

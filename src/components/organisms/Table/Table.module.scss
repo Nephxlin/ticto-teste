@@ -1,0 +1,68 @@
+@import "../../../styles/variables.scss";
+
+.table {
+  max-width: 1200px;
+  width: 100%;
+  margin: 20px auto;
+  box-sizing: border-box;
+
+  tr {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    @media (max-width: 850px) {
+      padding: 8px 12px;
+    }
+
+    td {
+      font-size: $--font-size-md;
+      font-family: $--font-Roboto;
+      color: $--color-grey-500;
+      text-align: left;
+      width: 30%;
+      @media (max-width: 850px) {
+        font-size: $--font-size-xsm;
+      }
+    }
+
+    td:last-child {
+      text-align: right;
+    }
+  }
+}
+
+.headerTable {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+
+  tr:first-child {
+    padding: 0px;
+    background-color: transparent;
+    margin: 0;
+    margin-top: 42px;
+    th {
+      font-weight: 400;
+      font-family: $--font-Roboto;
+      font-size: $--font-size-md;
+      @media (max-width: 850px) {
+        font-size: $--font-size-xsm;
+      }
+    }
+  }
+
+  th {
+    font-size: 18px;
+    color: #b9b9b9;
+    text-align: left;
+    width: 30%;
+    @media (max-width: 850px) {
+      font-size: $--font-size-xsm;
+    }
+  }
+}

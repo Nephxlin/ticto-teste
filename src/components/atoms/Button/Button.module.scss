@@ -1,0 +1,27 @@
+@import "../../../styles/variables.scss";
+
+.buttonDefault {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 8px;
+  opacity: 1;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $--font-Roboto;
+  font-size: $--font-size-sm;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.primaryButton {
+  background-color: $--color-purple-200;
+  color: $--color-grey-300;
+}
+
+.secondaryButton {
+  background-color: $--color-purple-200;
+  color: $--color-white;
+}

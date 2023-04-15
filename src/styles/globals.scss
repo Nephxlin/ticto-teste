@@ -1,104 +1,17 @@
-$--unnamed-color-4e5555: #4e5555;
-$--unnamed-color-e23161: #e23161;
-$--unnamed-color-ffffff: #ffffff;
-$--unnamed-color-06d6a2: #06d6a2;
-$--unnamed-color-401a9b: #401a9b;
-$--unnamed-color-484f55: #484f55;
-$--unnamed-color-4c5a5a: #4c5a5a;
-$--unnamed-color-db3766: #db3766;
-$--unnamed-color-06d7a5: #06d7a5;
-$--unnamed-color-b7bfc0: #b7bfc0;
+@import "./variables.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  font-smooth: antialiased;
+}
 
-/* Font/text values */
-$--unnamed-font-family-roboto: Roboto;
-$--unnamed-font-family-poppins: Poppins;
-$--unnamed-font-style-normal: normal;
-$--unnamed-font-weight-bold: bold;
-$--unnamed-font-weight-normal: normal;
-$--unnamed-font-weight-medium: medium;
-$--unnamed-font-size-18: 18px;
-$--unnamed-font-size-22: 22px;
-$--unnamed-font-size-24: 24px;
-$--unnamed-font-size-28: 28px;
-$--unnamed-font-size-42: 42px;
-$--unnamed-character-spacing-0: 0px;
-$--unnamed-character-spacing-0-73: 0.73px;
-$--unnamed-line-spacing-24: 24px;
-$--unnamed-line-spacing-29: 29px;
-$--unnamed-line-spacing-32: 32px;
-$--unnamed-line-spacing-37: 37px;
-$--unnamed-line-spacing-63: 63px;
+html {
+  font-family: --font-Poppins;
+  font-family: --font-Roboto;
+}
 
-/* Character Styles */
-.unnamed-character-style-1 {
-  font-family: $--unnamed-font-family-roboto;
-  font-style: $--unnamed-font-style-normal;
-  font-weight: $--unnamed-font-weight-bold;
-  font-size: $--unnamed-font-size-22;
-  line-height: $--unnamed-line-spacing-29;
-  letter-spacing: $--unnamed-character-spacing-0;
-  color: $--unnamed-color-ffffff;
-}
-.unnamed-character-style-2 {
-  font-family: &--unnamed-font-family-roboto;
-  font-style: &--unnamed-font-style-normal;
-  font-weight: &--unnamed-font-weight-bold;
-  font-size: $--unnamed-font-size-28;
-  line-height: $--unnamed-line-spacing-37;
-  letter-spacing: $--unnamed-character-spacing-0-73;
-  color: $--unnamed-color-4e5555;
-}
-.unnamed-character-style-3 {
-  font-family: $--unnamed-font-family-roboto;
-  font-style: $--unnamed-font-style-normal;
-  font-weight: $--unnamed-font-weight-bold;
-  font-size: $--unnamed-font-size-18;
-  line-height: $--unnamed-line-spacing-24;
-  letter-spacing: $--unnamed-character-spacing-0;
-  color: $--unnamed-color-b7bfc0;
-}
-.unnamed-character-style-4 {
-  font-family: $--unnamed-font-family-roboto;
-  font-style: $--unnamed-font-style-normal;
-  font-weight: $--unnamed-font-weight-normal;
-  font-size: $--unnamed-font-size-18;
-  line-height: $--unnamed-line-spacing-24;
-  letter-spacing: $--unnamed-character-spacing-0;
-  color: $--unnamed-color-4c5a5a;
-}
-.unnamed-character-style-5 {
-  font-family: $--unnamed-font-family-roboto;
-  font-style: $--unnamed-font-style-normal;
-  font-weight: $--unnamed-font-weight-bold;
-  font-size: $--unnamed-font-size-18;
-  line-height: $--unnamed-line-spacing-24;
-  letter-spacing: $--unnamed-character-spacing-0;
-  color: $--unnamed-color-06d7a5;
-}
-.unnamed-character-style-6 {
-  font-family: $--unnamed-font-family-roboto;
-  font-style: $--unnamed-font-style-normal;
-  font-weight: $--unnamed-font-weight-bold;
-  font-size: $--unnamed-font-size-18;
-  line-height: $--unnamed-line-spacing-24;
-  letter-spacing: $--unnamed-character-spacing-0;
-  color: $--unnamed-color-db3766;
-}
-.unnamed-character-style-7 {
-  font-family: $--unnamed-font-family-roboto;
-  font-style: $--unnamed-font-style-normal;
-  font-weight: $--unnamed-font-weight-normal;
-  font-size: $--unnamed-font-size-24;
-  line-height: $--unnamed-line-spacing-32;
-  letter-spacing: $--unnamed-character-spacing-0;
-  color: $--unnamed-color-484f55;
-}
-.unnamed-character-style-8 {
-  font-family: $--unnamed-font-family-poppins;
-  font-style: $--unnamed-font-style-normal;
-  font-weight: $--unnamed-font-weight-medium;
-  font-size: $--unnamed-font-size-42;
-  line-height: $--unnamed-line-spacing-63;
-  letter-spacing: $--unnamed-character-spacing-0;
-  color: $--unnamed-color-4e5555;
+body {
+  background-color: $--color-white-300;
 }

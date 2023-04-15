@@ -1,94 +1,49 @@
-import Head from 'next/head'
+import styles from '@/styles/Home.module.scss'
+import CardHandleClientBalance from '@/components/molecules/CardHandleClientBalance'
+import Table from '@/components/organisms/Table'
+import TrashIcon from '@/components/atoms/Icons/feather-trash'
+import ModalTransactionForm from '@/components/organisms/ModalTransactionForm'
+import { useState } from 'react'
 
 export default function Home() {
+  const [isOpenTransactionModal, setIsOpenTransactionModal] = useState(false)
+
+  const TableController = {
+    columns: [
+      { name: 'Descrição' },
+      { name: 'Valor' },
+      { name: 'Categoria' },
+      { name: 'Data' },
+      { name: '' }],
+    data: [
+      { id: 1, description: 'Curso de NextJS', value: 'R$ 899,00', category: 'Educação', data: '12/02/2022 às 13h24' },
+      { id: 2, description: 'Curso de NextJS', value: 'R$ 899,00', category: 'Educação', data: '12/02/2022 às 13h24' },
+      { id: 3, description: 'Curso de NextJS', value: 'R$ 899,00', category: 'Educação', data: '12/02/2022 às 13h24' },
+    ]
+  }
+
   return (
-    <>
-      <Head>
-        <title>Create Next App</title>
-        <meta name="description" content="Luther Marques Cordeiro - front-end Test" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <main>
+    <div>
+      <div className={styles.cardsContainer} >
+        <CardHandleClientBalance type='INPUT_BALANCE' />
+        <CardHandleClientBalance type='OUTPUT_BALANCE' />
+        <CardHandleClientBalance type='CURRENT_BALANCE' />
+      </div>
 
-        <div>
-          <div>
-            <h1 className='unnamed-character-style-2'>Logo</h1>
-            <button>NOVA TRANSAÇÃO</button>
-          </div>
-        </div>
-
-        <div>
-          <div>
-            <span>Saídas</span>
-            <p>ICON</p>
-          </div>
-          <div>
-            <p>
-              R$ 1.529.289,52
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <div>
-            <span>Saldo Total</span>
-          </div>
-          <div>
-            <p>
-              R$ 50,00
-            </p>
-          </div>
-        </div>
-
-        <table>
-          <thead>
-            <tr>
-              <th>Descrição</th>
-              <th>Valor</th>
-              <th>Categoria</th>
-              <th>Data</th>
-              <th>Lixeira</th>
+      <Table columns={TableController.columns} >
+        <>
+          {TableController.data.map((e) => (
+            <tr key={e.id}>
+              <td>{e.description}</td>
+              <td>{e.value}</td>
+              <td>{e.category}</td>
+              <td>{e.data}</td>
+              <td><TrashIcon /></td>
             </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Compras no mercado</td>
-              <td>R$ 150,00</td>
-              <td>Alimentação</td>
-              <td>10/04/2023</td>
-              <td><a href="#">Excluir</a></td>
-            </tr>
-            <tr>
-              <td>Assinatura Netflix</td>
-              <td>R$ 45,00</td>
-              <td>Entretenimento</td>
-              <td>05/04/2023</td>
-              <td><a href="#">Excluir</a></td>
-            </tr>
-            <tr>
-              <td>Gasolina</td>
-              <td>R$ 80,00</td>
-              <td>Transporte</td>
-              <td>02/04/2023</td>
-              <td><a href="#">Excluir</a></td>
-            </tr>
-            <tr>
-              <td>Conserto do celular</td>
-              <td>R$ 350,00</td>
-              <td>Tecnologia</td>
-              <td>28/03/2023</td>
-              <td><a href="#">Excluir</a></td>
-            </tr>
-            <tr>
-              <td>Roupas novas</td>
-              <td>R$ 250,00</td>
-              <td>Moda</td>
-              <td>25/03/2023</td>
-              <td><a href="#">Excluir</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </main>
-    </>
+          ))}
+        </>
+      </Table>
+      <ModalTransactionForm />
+    </div>
   )
 }

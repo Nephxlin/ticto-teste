@@ -1,0 +1,77 @@
+import style from './CardHandleClientBalace.module.scss'
+import ArrowUpIcon from '@/components/atoms/Icons/ArrowUpIcon'
+import ArrowDownIcon from '@/components/atoms/Icons/ArrowDownIcon';
+import { HTMLAttributes, HtmlHTMLAttributes } from 'react';
+
+type ICardTypes = 'CURRENT_BALANCE' | 'INPUT_BALANCE' | 'OUTPUT_BALANCE'
+
+function CardType(themeColor: ICardTypes) {
+
+  switch (themeColor) {
+    case 'CURRENT_BALANCE':
+      return {
+        theme: 'cyan',
+        title: 'Saldo Total',
+        value: 'R$ 50,00',
+        icon: ''
+      }
+    case 'INPUT_BALANCE':
+      return {
+        theme: 'white',
+        title: 'Entradas',
+        value: 'R$ 1.529.289,52',
+        icon: <ArrowDownIcon />
+      }
+    case 'OUTPUT_BALANCE':
+      return {
+        theme: 'white',
+        title: 'Saídas',
+        value: 'R$ 1.529.289,52',
+        icon: <ArrowUpIcon />
+      }
+    default:
+      return {
+        theme: 'white',
+        title: 'Carregando',
+        icon: ''
+      }
+  }
+}
+
+interface ICardHandleClientBalanceTypes {
+  type: ICardTypes
+}
+
+type ICardTheme = 'white' | 'cyan' | String;
+
+function getThemeStyled(theme: ICardTheme) {
+  switch (theme) {
+    case 'cyan':
+      return style.cyanTheme
+    case 'white':
+      return style.whiteTheme
+    default:
+      return style.whiteTheme
+  }
+}
+
+export default function CardHandleClientBalance({ type, ...props }: ICardHandleClientBalanceTypes) {
+
+  const cardDataType = CardType(type)
+
+  return (
+    <div {...props} className={`${style.cardBoxDefaultStyle + " " + getThemeStyled(cardDataType.theme)}`}>
+      <div className={style.cardBoxHeadInfoContent}>
+        <div>
+          <span className={style.cardTitle}>{cardDataType.title}</span>
+        </div>
+        {cardDataType.icon}
+      </div>
+      <div>
+        <span className={style.cardValue}>
+          {cardDataType.value}
+        </span>
+      </div>
+    </div>
+  )
+}

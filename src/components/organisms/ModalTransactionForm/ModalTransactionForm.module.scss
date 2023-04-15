@@ -1,0 +1,29 @@
+@import "../../../styles/variables.scss";
+
+.modalTitle {
+  font-family: $--font-Roboto;
+  color: $--color-grey-700;
+  font-size: $--font-size-x;
+}
+
+.dataFormWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 20px;
+  margin-top: 34px;
+}
+
+.buttonFormArea {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (max-width: 730px) {
+    display: flex;
+    justify-content: center;
+  }
+}

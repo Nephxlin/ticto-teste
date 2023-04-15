@@ -1,0 +1,62 @@
+@import "../../../styles/variables.scss";
+
+.buttonDefault {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  text-align: center;
+  font-family: $--font-Roboto;
+  font-size: $--font-size-ml;
+  font-weight: 400;
+  border: none;
+  border: 1px solid $--color-grey-100;
+  background-color: $--color-white;
+  color: $--color-grey-700;
+  height: 68px;
+  width: 100%;
+  @media (max-width: 800px) {
+    height: 42px;
+  }
+
+  input[type="radio"]:after {
+    content: " ";
+    display: flex;
+    position: absolute;
+    width: 98%;
+    height: 92%;
+    visibility: initial;
+  }
+  input[type="radio"]:checked {
+    content: " ";
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+
+    &::after {
+      border: 4px solid $--color-purple-200;
+      border-radius: 7px;
+    }
+  }
+}
+
+.ButtonRadio {
+  position: relative;
+  display: flex;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.buttonIcon {
+  display: flex;
+  align-items: center;
+  margin-right: 18px;
+}
+
+.radioLabel {
+  position: absolute;
+  display: flex;
+}
