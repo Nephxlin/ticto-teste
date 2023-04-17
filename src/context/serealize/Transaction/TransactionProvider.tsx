@@ -30,9 +30,9 @@ const TransactionsContext = createContext<ITransactionsContext>({
     difference: 0,
   },
   transactions: [],
-  createTransaction: () => {},
+  createTransaction: () => { },
   readTransaction: () => undefined,
-  deleteTransaction: () => {},
+  deleteTransaction: () => { },
 })
 
 export const useTransactions = () => useContext(TransactionsContext)
