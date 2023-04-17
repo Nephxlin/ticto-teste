@@ -1,5 +1,5 @@
 import { Roboto, Poppins } from 'next/font/google'
-import styles from './LayoutBase.module.scss'
+
 import {
   JSXElementConstructor,
   ReactElement,
@@ -9,6 +9,8 @@ import {
 import Header from '@/components/organisms/Header'
 import { ModalProvider } from '@/context/common/Modal/modalProvider'
 import TransactionProvider from '@/context/serealize/Transaction/TransactionProvider'
+
+import styles from './LayoutBase.module.scss'
 
 const roboto = Roboto({
   subsets: ['latin'],
