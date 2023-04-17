@@ -1,31 +1,29 @@
-
-import { ReactElement } from 'react';
+'use-client'
+import { ReactElement } from 'react'
 import styles from './Table.module.scss'
 
 interface IColumn {
-  name: string;
-  label?: string;
-
+  name: string
+  label?: string
 }
 
 interface ITableProps {
-  columns: IColumn[];
-  children: ReactElement
+  columns: IColumn[]
+  children?: ReactElement[]
 }
 export default function Table({ columns, children }: ITableProps) {
   return (
-    <table className={styles.table} >
+    <table className={styles.table}>
       <thead className={styles.headerTable}>
         <tr>
           {columns.map((column) => (
-            <th key={column.name}>{column.name}</th>
+            <th key={column.name} suppressHydrationWarning>
+              {column.name}
+            </th>
           ))}
         </tr>
       </thead>
-      <tbody>
-        {children}
-      </tbody>
+      <tbody>{children}</tbody>
     </table>
-  );
-};
-
+  )
+}
