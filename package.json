@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "prepare": "husky install~"
+    "lint": "next lint"
   },
   "dependencies": {
     "@types/node": "18.15.11",
@@ -27,11 +26,6 @@
   },
   "devDependencies": {
     "@types/uuid": "^9.0.1",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.1",
     "prettier": "2.8.7"
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
   }
 }
