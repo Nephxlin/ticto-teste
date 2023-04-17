@@ -25,14 +25,14 @@ const poppins = Poppins({
 
 export default function LayoutBase(props: {
   children:
-    | string
-    | number
-    | boolean
-    | ReactElement<any, string | JSXElementConstructor<any>>
-    | ReactFragment
-    | ReactPortal
-    | null
-    | undefined
+  | string
+  | number
+  | boolean
+  | ReactElement<any, string | JSXElementConstructor<any>>
+  | ReactFragment
+  | ReactPortal
+  | null
+  | undefined
 }) {
   return (
     <div className={`${roboto.variable + ' ' + poppins.variable}`}>
